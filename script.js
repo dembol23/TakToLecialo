@@ -2,5 +2,5 @@ const playButton = document.getElementById("play-button")
 playButton.addEventListener("click", function () {
     var url = window.location.origin;
     url = url + "/game.html";
-    window.location.pathname = url;
+    window.location.replace = url;
 })
