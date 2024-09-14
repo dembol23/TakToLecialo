@@ -1,14 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+}
 body{
-    background-image: url("../assets/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
-main{
+.background-image{
+    background-image: url("../assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: blur(5px);
+    padding: 10px;
+}
+.menu{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,10 +31,10 @@ main{
     max-width: 400px;
     width: 100%;
 }
-main img{
+.menu__logo{
     width: 100%;
 }
-button{
+.play-button{
     max-width: 350px;
     width: 85%;
     height: 80px;
@@ -28,11 +43,9 @@ button{
     border-top:3px gold solid;
     border-bottom:3px gold solid;
     color: #fff;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
     font-size: 40px;
     cursor: pointer;
 }
-button:hover{
+.play-button:hover{
     background: rgb(8, 8, 103);
 }
